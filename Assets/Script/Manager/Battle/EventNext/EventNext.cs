@@ -42,7 +42,7 @@ public class EventNext : MonoBehaviour
         }
 
         DialogueManager.i.onDialogue = false;
-        PlayerInterection.PI.AddHp(5);
+        PlayerInterection.PI.AddHp(2);
         Destroy(this.gameObject);
     }
 }

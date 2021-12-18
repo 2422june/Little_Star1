@@ -25,7 +25,6 @@ public class BGMManager : MonoBehaviour
     int state;
     public float volume = 1;
 
-    // Start is called before the first frame update
     void Start()
     {
         volume = 0;
@@ -48,6 +47,10 @@ public class BGMManager : MonoBehaviour
     public void BgmPause()
     {
         Bgm.Pause();
+    }
+
+    public void BGMOnLoop(bool isOn){
+        Bgm.loop = isOn;
     }
 
     public void SetBGMVolume(float _volume)

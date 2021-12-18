@@ -259,11 +259,11 @@ public class BattleEvent1 : MonoBehaviour
         if (round == 14 && time >= 2.3f)
         {
             if(!isBeddingKick)
-                DialogueManager.i.OnBattleNext(new Vector2(-5, 0f), new Vector2(1, 1), GameManager.BattleSpriteState.beddingKick);
+                DialogueManager.i.OnBattleNext(new Vector2(0, -3f), new Vector2(1, 1), GameManager.BattleSpriteState.beddingKick);
             if(!isGlass)
-                DialogueManager.i.OnBattleNext(new Vector2(0, 0f), new Vector2(1, 1), GameManager.BattleSpriteState.findingGlass);
+                DialogueManager.i.OnBattleNext(new Vector2(3, 0f), new Vector2(1, 1), GameManager.BattleSpriteState.findingGlass);
             if(!isLight)
-                DialogueManager.i.OnBattleNext(new Vector2(5, 0f), new Vector2(1, 1), GameManager.BattleSpriteState.light);
+                DialogueManager.i.OnBattleNext(new Vector2(-5, 3f), new Vector2(1, 1), GameManager.BattleSpriteState.light);
             isStop = true;
             round++;
         }
@@ -309,7 +309,7 @@ public class BattleEvent1 : MonoBehaviour
                     break;
 
                 case 3:
-                    if (!isBeddingKick)
+                    if (!isGlass)
                     {
                         DialogueManager.i.OnBase(true, new Vector2(0, 300), new Vector2(1200, 250));
                         DialogueManager.i.OnTxt(50, "전등 스위치가 안보여...\n안경을 써야 한다.", 1f, new Color(255, 255, 255, 255));
@@ -367,7 +367,7 @@ public class BattleEvent1 : MonoBehaviour
             BGMManager.i.SetBGMVolume(1 - time);
             if (1 - time <= 0)
             {
-                time = 1f;
+                time = 4f;
                 round++;
             }
         }
@@ -426,6 +426,13 @@ public class BattleEvent1 : MonoBehaviour
         if (round == 6 && time >= 7f)
         {
             Fade.i.OnFade(3);
+            round++;
+        }
+        #endregion
+
+        #region event5
+        if (round == 7 && time >= 13f)
+        {
             GameManager.GM.SetScene(GameManager.NowScene.secondScene);
         }
         #endregion
@@ -451,7 +458,6 @@ public class BattleEvent1 : MonoBehaviour
             time = 0;
             round = 0;
             nowEvent = false;
-            //GameManager.GM.SetScene(GameManager.NowScene.secondScene);
         }
     }
 

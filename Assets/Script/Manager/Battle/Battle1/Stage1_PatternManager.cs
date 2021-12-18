@@ -62,7 +62,7 @@ public class Stage1_PatternManager : MonoBehaviour
 
     private void Update()
     {
-        if (BattleEvent1.i.IsOffEvent())
+        if (BattleEvent1.i.IsOffEvent() && Count == 0)
         {
             if(Count == -1)
             {

@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
                 FieldManager.FieldMng.OnField(true, new Vector2(0, 0), new Vector2(1.8f, 1.8f));
                 SetScene(NowScene.introBattle);
             }
+
             if (sceneSkeep == 3)
             {
                 SetScene(NowScene.secondScene);
@@ -155,7 +156,7 @@ public class GameManager : MonoBehaviour
         IntroManager.i.isStop = false;
 
         SecondManager.i.time = 0f;
-        SecondManager.i.round = 4;
+        SecondManager.i.round = 3;
         SecondManager.i.isStop = false;
 
         Stage1_PatternManager.i.GameSpeed = 1;
@@ -188,10 +189,12 @@ public class GameManager : MonoBehaviour
             case NowScene.introBattle:
                 nowBattle = true;
                 stage = 1;
+                BGMManager.i.BGMOnLoop(false);
                 SceneManager.LoadScene("IntroBattle");
                 break;
 
             case NowScene.gameOver:
+                BGMManager.i.BGMOnLoop(true);
                 nowBattle = false;
                 switch (stage)
                 {
@@ -208,11 +211,13 @@ public class GameManager : MonoBehaviour
                 break;
 
             case NowScene.secondScene:
+                BGMManager.i.BGMOnLoop(true);
                 nowBattle = false;
                 SceneManager.LoadScene("SecondScene");
                 break;
 
             case NowScene.secondBattle:
+                BGMManager.i.BGMOnLoop(false);
                 break;
 
             case NowScene.chapter2:

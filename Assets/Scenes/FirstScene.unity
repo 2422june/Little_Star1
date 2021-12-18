@@ -258,6 +258,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3603383549657517526, guid: 108949eb66b1ec74e96faba928b36846, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603383549657517526, guid: 108949eb66b1ec74e96faba928b36846, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4175067236103228761, guid: 108949eb66b1ec74e96faba928b36846, type: 3}
       propertyPath: m_Name
       value: DialogueMng
@@ -342,6 +350,7 @@ MonoBehaviour:
   spawnSquareType7: {fileID: 148221995646900507, guid: 86afcd08115647f41a093dd720a86c14, type: 3}
   Timer: 0
   Count: 0
+  isEndLastEvent: 0
 --- !u!1 &680246915
 GameObject:
   m_ObjectHideFlags: 0
