@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void SetScripts()
+    public void SetScripts()
     {
         TitleManager.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.firstScene);
         IntroManager.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.intro);
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
         Stage1_PatternManager.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.introBattle);
     }
 
-    void ResetScene()
+    public void ResetScene()
     {
         nowBattle = false;
         stage = 0;
@@ -196,6 +196,7 @@ public class GameManager : MonoBehaviour
             case NowScene.gameOver:
                 BGMManager.i.BGMOnLoop(true);
                 nowBattle = false;
+                ResetScene();
                 switch (stage)
                 {
                     case 1:
@@ -217,7 +218,10 @@ public class GameManager : MonoBehaviour
                 break;
 
             case NowScene.secondBattle:
+                nowBattle = true;
+                stage = 1;
                 BGMManager.i.BGMOnLoop(false);
+                //SceneManager.LoadScene("SecondScene");
                 break;
 
             case NowScene.chapter2:

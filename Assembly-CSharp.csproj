@@ -90,6 +90,7 @@
     <Compile Include="Assets\Resource\Sprite\BGMManager\BGMManager.cs" />
     <Compile Include="Assets\Script\Manager\SecondManager\SecondManager.cs" />
     <Compile Include="Assets\Script\BinScripts\Object\ObjectEffect.cs" />
+    <Compile Include="Assets\Script\Manager\GameOverManager\GameOverManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

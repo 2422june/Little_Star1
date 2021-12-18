@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1c4744cce884b4eb536cd36bfed991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 922880644}
   time: 0
   isStop: 0
   round: 0

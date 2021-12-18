@@ -14,6 +14,7 @@ ScriptsOnlyBuild:
     - Fade
     - FieldManager
     - GameManager
+    - GameOverManager
     - IntroManager
     - ObjectEffect
     - ObjectMove
@@ -35,6 +36,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -47,12 +49,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -209,6 +205,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3024}
     - Class: 114
       Script: {instanceID: 3270}
+    - Class: 114
+      Script: {instanceID: 25510}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -264,39 +262,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 1450}
-    - Class: 114
-      Script: {instanceID: 2638}
-    - Class: 114
-      Script: {instanceID: 2802}
-    - Class: 114
-      Script: {instanceID: 3024}
-    - Class: 114
-      Script: {instanceID: 3270}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -487,7 +461,7 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: c51d8cb28d43cbe6c7daaa4ea41f0af2
+      Hash: 3c9c8020c2534b2bc78613d6dce23db2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Stage1_PatternManager
@@ -1037,6 +1011,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/FirstScene.unity
