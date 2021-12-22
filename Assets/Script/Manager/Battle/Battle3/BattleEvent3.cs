@@ -25,7 +25,6 @@ public class BattleEvent3 : MonoBehaviour
     public int round = 0, choose = 0;
     public float time = 0f;
     public bool isStop = false;
-    public bool isBeddingKick = false, isLight = false, isGlass = false;
     public bool nowEvent = false, startEvent = false, isFirst = false;
     #endregion
 
@@ -79,8 +78,8 @@ public class BattleEvent3 : MonoBehaviour
         {
             if (!isFirst)
             {
-                DialogueManager.i.OnBase(true, new Vector2(0, 300), new Vector2(1200, 250));
-                DialogueManager.i.OnTxt(50, "당신의 몸은 아직 잠들어 있다.", 1.5f, new Color(255, 255, 255, 255));
+                DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(800, 150));
+                DialogueManager.i.OnTxt(50, "당신의 의지는 꺼지지 않는다.", 1.5f, new Color(255, 255, 255, 255));
                 DialogueManager.i.OnDialogueNext(new Vector2(0, -2f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             }
             isStop = true;

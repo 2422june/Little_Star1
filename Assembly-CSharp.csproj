@@ -98,11 +98,11 @@
     <Compile Include="Assets\Prefabs\BinPrefabs\Battle2\Scripts\Square\SquareOrderHieght.cs" />
     <Compile Include="Assets\Script\BinScripts\Object\ObjectMove.cs" />
     <Compile Include="Assets\Script\Manager\ThirdManager\ThirdManager.cs" />
-    <Compile Include="Assets\Resource\Sprite\BGMManager\BGMManager.cs" />
+    <Compile Include="Assets\Script\Manager\BGMManager\BGMManager.cs" />
     <Compile Include="Assets\Script\Manager\SecondManager\SecondManager.cs" />
     <Compile Include="Assets\Script\BinScripts\Object\ObjectEffect.cs" />
-    <Compile Include="Assets\Script\Manager\LastManager\LastManager.cs" />
     <Compile Include="Assets\Script\Button\GMOver.cs" />
+    <Compile Include="Assets\Script\Manager\LastManager\LastManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

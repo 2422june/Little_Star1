@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     public enum NextSpriteState
     {
-        GameStart, TitleSubject, GameQuit, Next, DialogueNext
+        GameStart, TitleSubject, GameQuit, Next, DialogueNext, Hill
     };
 
     public enum BattleSpriteState

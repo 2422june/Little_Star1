@@ -47,23 +47,20 @@ public class PlayerInterection : MonoBehaviour
 
     public void ShowDark()
     {
-        //int val = (maxHp - hp);
-        //float val2 = 1.0f / (float)(maxHp - val);
-        //float val3 = ((float)maxHp / (float)val) / (float)maxHp;
         float val4 = (1.0f / maxHp) * hp;
-        //Fade.i.SetDark((float)val / (float)maxHp);
         SRR.color = new Color(val4, val4, val4, 1);
     }
 
     public void Hill()
     {
-        hp = maxHp;
-        ShowDark();
+        AddHp(maxHp);
     }
 
     public void AddHp(int i)
     {
-        if(hp + i < GameManager.GM.PlaMaxHp)
+        Blue();
+        Invoke("Yellow", 1f);
+        if (hp + i < GameManager.GM.PlaMaxHp)
         {
             hp += i;
         }
@@ -72,15 +69,15 @@ public class PlayerInterection : MonoBehaviour
             hp = GameManager.GM.PlaMaxHp;
         }
         BGMManager.i.EFTPlay(1);
-        ShowDark();
     }
 
     public void GetHit()
     {
         hp--;
+        Red();
+        Invoke("Yellow", 1f);
         Fade.i.SetDark();
         BGMManager.i.EFTPlay(0);
-        ShowDark();
         if (hp <= 0)
         {
             GameManager.GM.SetScene(GameManager.NowScene.gameOver);
@@ -92,5 +89,21 @@ public class PlayerInterection : MonoBehaviour
     {
         //Destroy(this.gameObject);
         this.gameObject.SetActive(false);
+    }
+
+    public void Red()
+    {
+        SRR.color = Color.red;
+    }
+
+    public void Blue()
+    {
+        SRR.color = Color.green;
+    }
+
+    public void Yellow()
+    {
+        SRR.color = new Color(255, 255, 255, 255);
+        ShowDark();
     }
 }

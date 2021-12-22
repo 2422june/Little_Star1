@@ -200,7 +200,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5634}
     - Class: 114
-      Script: {instanceID: 5728}
+      Script: {instanceID: 5730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -253,7 +253,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4150}
     - Class: 114
-      Script: {instanceID: 38822}
+      Script: {instanceID: 5638}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1088,6 +1088,12 @@ ScriptsOnlyBuild:
     className: ObjectEffect
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GMOver
+  - hash:
+      serializedVersion: 2
       Hash: 762a30c8d779b11af16ed9ce1f2d32fa
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
@@ -1098,12 +1104,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LastManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GMOver
   platform: 19
   scenePathNames:
   - Assets/Scenes/FirstScene.unity

@@ -98,6 +98,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("DialogueNext"))
             {
+                if(collision.gameObject.GetComponent<DialogueNext>().NSS == GameManager.NextSpriteState.TitleSubject)
+                {
+                    return;
+                }
                 AS.Play();
                 collision.gameObject.GetComponent<DialogueNext>().Push();
             }

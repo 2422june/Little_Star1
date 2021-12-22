@@ -15,6 +15,7 @@ public class DialogueNext : MonoBehaviour
         transform.position = new Vector3(_pos.x, _pos.y, 1);
         transform.localScale = _scale;
         NSS = nss;
+        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
     }
 
     private void Start()
@@ -60,6 +61,20 @@ public class DialogueNext : MonoBehaviour
         {
             txt.isNext = true;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && NSS != GameManager.NextSpriteState.TitleSubject)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255, 255, 0, 255);
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && NSS != GameManager.NextSpriteState.TitleSubject)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+        }
     }
 }

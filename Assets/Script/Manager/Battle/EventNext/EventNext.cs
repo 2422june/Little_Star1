@@ -13,6 +13,7 @@ public class EventNext : MonoBehaviour
         transform.position = new Vector3(_pos.x, _pos.y, 1);
         transform.localScale = _scale;
         BSS = bss;
+        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
     }
 
     void Update()
@@ -86,5 +87,20 @@ public class EventNext : MonoBehaviour
         DialogueManager.i.onDialogue = false;
         PlayerInterection.PI.AddHp(2);
         Destroy(this.gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255, 255, 0, 255);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+        }
     }
 }

@@ -173,8 +173,15 @@ public class Stage2_PatternManager : MonoBehaviour
         }
         else if(battle_Timer >= 45f && battle_Count == 6)       //선택지 1번 생성
         {
-            if (!BattleEvent2.i.isClearBathRoom)
-                BattleEvent2.i.SetEvent(1);
+            if (!BattleEvent2.i.nowEvent)
+            {
+                if (!BattleEvent2.i.isClearBathRoom)
+                    BattleEvent2.i.SetEvent(1);
+                else if (!BattleEvent2.i.isClearCabinet)
+                {
+                    BattleEvent2.i.SetEvent(2);
+                }
+            }
             circleAndSquare = Instantiate(circle_And_square, Vector2.zero, Quaternion.identity);
             battle_Count++;
         }
@@ -219,7 +226,7 @@ public class Stage2_PatternManager : MonoBehaviour
         }
         else if(battle_Timer >= 88f && battle_Count == 14)      //선택지 2번 생성
         {
-            if (!BattleEvent2.i.nowEvent && !BattleEvent2.i.isClearCabinet)
+            if (!BattleEvent2.i.nowEvent && !BattleEvent2.i.isClearCabinet && BattleEvent2.i.isClearBathRoom)
             {
                 BattleEvent2.i.SetEvent(2);
             }
@@ -267,6 +274,10 @@ public class Stage2_PatternManager : MonoBehaviour
         }
         else if(battle_Timer >= 160f && battle_Count == 22)     //선택지 3번 생성
         {
+            if (!BattleEvent2.i.nowEvent && !BattleEvent2.i.isClearCabinet && BattleEvent2.i.isClearBathRoom)
+            {
+                BattleEvent2.i.SetEvent(2);
+            }
             Destroy(circleBoom_1.gameObject);
             Destroy(circleBoom_2.gameObject);
             battle_Count++;

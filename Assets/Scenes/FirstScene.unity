@@ -355,6 +355,7 @@ MonoBehaviour:
   isBeddingKick: 0
   isLight: 0
   isGlass: 0
+  complete: 0
   nowEvent: 0
   startEvent: 0
   isFirst: 0
@@ -987,6 +988,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6fd47f07740102e478a1018b62e6e21b, type: 3}
   - {fileID: 21300000, guid: bbd54280d35582f40974438a2b3c5ee8, type: 3}
   - {fileID: 21300000, guid: cda33f8325470cb4ab961296e0995a55, type: 3}
+  - {fileID: 21300000, guid: 4515f36e1b9a4d442863f2a0c9bda5aa, type: 3}
   - {fileID: 21300000, guid: 4515f36e1b9a4d442863f2a0c9bda5aa, type: 3}
   - {fileID: 21300000, guid: 4515f36e1b9a4d442863f2a0c9bda5aa, type: 3}
   BattleSprite:
