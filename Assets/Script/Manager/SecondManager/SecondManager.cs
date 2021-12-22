@@ -69,7 +69,7 @@ public class SecondManager : MonoBehaviour
         if (round == 4 && time >= 2)
         {
             DialogueManager.i.OnBase(true, new Vector2(0, 300), new Vector2(1200, 250));
-            DialogueManager.i.OnTxt(50, "사감선생님의 목소리가 들려온다.", 1.5f, new Color(255, 255, 255, 255));
+            DialogueManager.i.OnTxt(50, "사감선생님의 목소리가 들려온다.", 2, new Color(255, 255, 255, 255));
             DialogueManager.i.OnDialogueNext(new Vector2(0, -2f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
@@ -112,7 +112,7 @@ public class SecondManager : MonoBehaviour
         {
             DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "그리고 방의 문이 열렸다.",
-                1.5f, new Color(255, 255, 255, 255));
+                1.8f, new Color(255, 255, 255, 255));
             DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
@@ -131,10 +131,10 @@ public class SecondManager : MonoBehaviour
         #region Dialogue.4
         if (round == 10 && time >= 7)
         {
-            DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
+            DialogueManager.i.OnBase(true, new Vector2(0, 25f), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "머리만 빼꼼 방안에 내미신\n사감 선생님께서 말씀하신다.",
-                2f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+                3f, new Color(255, 255, 255, 255));
+            DialogueManager.i.OnDialogueNext(new Vector2(0, -1.5f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
         }
@@ -153,10 +153,10 @@ public class SecondManager : MonoBehaviour
         #region Dialogue.5
         if (round == 12 && time >= 7.5f)
         {
-            DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
+            DialogueManager.i.OnBase(true, new Vector2(-300, 20), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "[사감 선생님]\n일어나서 등교 준비해라.",
-                1f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+                1.5f, new Color(255, 255, 255, 255));
+            DialogueManager.i.OnDialogueNext(new Vector2(-2.5f, -1.5f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
         }
@@ -174,7 +174,7 @@ public class SecondManager : MonoBehaviour
         #region Dialogue.6
         if (round == 14 && time >= 8f)
         {
-            //문닫는 효과음
+            BGMManager.i.EFTPlay(3);
             round++;
         }
         #endregion
@@ -182,10 +182,10 @@ public class SecondManager : MonoBehaviour
         #region Dialogue.7
         if (round == 15 && time >= 9.5f)
         {
-            DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
+            DialogueManager.i.OnBase(true, new Vector2(-300, 20), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "그리고 나가셨다.",
-                0.5f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+                1f, new Color(255, 255, 255, 255));
+            DialogueManager.i.OnDialogueNext(new Vector2(-2.5f, -1.5f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
         }
@@ -205,7 +205,7 @@ public class SecondManager : MonoBehaviour
         {
             DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "당신은 일어나 자가진단을 하고,",
-                1f, new Color(255, 255, 255, 255));
+                1.5f, new Color(255, 255, 255, 255));
             DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
@@ -226,7 +226,7 @@ public class SecondManager : MonoBehaviour
         {
             DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "시간을 보고,",
-                0.5f, new Color(255, 255, 255, 255));
+                1f, new Color(255, 255, 255, 255));
             DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
@@ -245,10 +245,10 @@ public class SecondManager : MonoBehaviour
         #region Dialogue.10
         if (round == 21 && time >= 11f)
         {
-            DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
+            DialogueManager.i.OnBase(true, new Vector2(0, -200), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "다시 잠들었다...",
-                0.5f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+                1f, new Color(255, 255, 255, 255));
+            DialogueManager.i.OnDialogueNext(new Vector2(0, -4f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
         }
@@ -267,10 +267,10 @@ public class SecondManager : MonoBehaviour
         #region Dialogue.11
         if (round == 23 && time >= 11.5f)
         {
-            DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
+            DialogueManager.i.OnBase(true, new Vector2(0, -200), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "어...",
-                0.5f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+                1f, new Color(255, 255, 255, 255));
+            DialogueManager.i.OnDialogueNext(new Vector2(0, -4), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
         }
@@ -288,10 +288,10 @@ public class SecondManager : MonoBehaviour
         #region Dialogue.12
         if (round == 25 && time >= 12f)
         {
-            DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
+            DialogueManager.i.OnBase(true, new Vector2(0, -200), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "지금이 몇시지..",
-                0.5f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+                1.5f, new Color(255, 255, 255, 255));
+            DialogueManager.i.OnDialogueNext(new Vector2(0, -4), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
         }
@@ -309,10 +309,10 @@ public class SecondManager : MonoBehaviour
         #region Dialogue.13
         if (round == 27 && time >= 13f)
         {
-            DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
+            DialogueManager.i.OnBase(true, new Vector2(0, -100), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "당신은 핸드폰으로 시간을 확인했다.",
-                1f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+                2f, new Color(255, 255, 255, 255));
+            DialogueManager.i.OnDialogueNext(new Vector2(0, -3), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
         }
@@ -332,7 +332,7 @@ public class SecondManager : MonoBehaviour
         {
             DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
             DialogueManager.i.OnTxt(70, "8시",
-                0.5f, new Color(255, 255, 255, 255));
+                1f, new Color(255, 255, 255, 255));
             DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
@@ -354,7 +354,7 @@ public class SecondManager : MonoBehaviour
         {
             DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "이런 미친...",
-                1f, new Color(255, 255, 255, 255));
+                2f, new Color(255, 255, 255, 255));
             DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
@@ -375,7 +375,7 @@ public class SecondManager : MonoBehaviour
         {
             DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(900, 230));
             DialogueManager.i.OnTxt(50, "다시 전투가 시작되었다.",
-                1f, new Color(255, 255, 255, 255));
+                1.5f, new Color(255, 255, 255, 255));
             DialogueManager.i.OnDialogueNext(new Vector2(0, -2), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
@@ -397,10 +397,10 @@ public class SecondManager : MonoBehaviour
             //타이핑 사운드 변경
             DialogueManager.i.SetTypinigSound(1);
 
-            DialogueManager.i.OnBase(true, new Vector2(0, 0), new Vector2(1500, 300));
+            DialogueManager.i.OnBase(true, new Vector2(0, 200), new Vector2(1500, 300));
             DialogueManager.i.OnTxt(90, "전투2.\n등교준비.",
                 3f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0f, -2f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+            DialogueManager.i.OnDialogueNext(new Vector2(0f, -1f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             isStop = true;
             round++;
         }
@@ -416,7 +416,7 @@ public class SecondManager : MonoBehaviour
                 isStop = false;
 
                 //씬 변경
-                //GameManager.GM.SetScene(GameManager.NowScene.introBattle);
+                GameManager.GM.SetScene(GameManager.NowScene.secondBattle);
                 round++;
             }
         }

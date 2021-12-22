@@ -283,6 +283,8 @@ GameObject:
   - component: {fileID: 654853177}
   - component: {fileID: 654853179}
   - component: {fileID: 654853180}
+  - component: {fileID: 654853178}
+  - component: {fileID: 654853182}
   m_Layer: 0
   m_Name: BattleMng
   m_TagString: Untagged
@@ -304,6 +306,35 @@ Transform:
   m_Father: {fileID: 1487035262}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &654853178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654853176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc5fcd5690bf941a385d881b69b4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events: 0
+  round: 0
+  choose: 0
+  time: 0
+  isStop: 0
+  nowEvent: 0
+  startEvent: 0
+  isFirst: 0
+  isInBathRoom: 0
+  isFrontCabinet: 0
+  isFrontBad: 1
+  isClearBathRoom: 0
+  isClearCabinet: 0
+  hair: 0
+  dry: 0
+  top: 0
+  bottom: 0
 --- !u!114 &654853179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +382,31 @@ MonoBehaviour:
   Timer: 0
   Count: 0
   isEndLastEvent: 0
+--- !u!114 &654853182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654853176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa3c320c8c555e4a96cffd4ab406337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battle_Count: 0
+  battle_Timer: 0
+  onStart_Stage: 0
+  square_Width: {fileID: 3832780072120507121, guid: e34709366a4a00f45882b99d710e1860, type: 3}
+  square_Hieght: {fileID: 1030811567681617462, guid: 7043cc5473a39e64883d900421ce9d41, type: 3}
+  square_Order_Hieght: {fileID: 5254976888296796390, guid: 31d0b6b617cdc8346b42991b9329ce4d, type: 3}
+  square_Width_And_Hieght: {fileID: 1259107716731099926, guid: f220c72f0a23fae41bfd8de796e729b1, type: 3}
+  square_Down: {fileID: 6807946968926834943, guid: f27a4866295cc70479047e0208bad4b9, type: 3}
+  square_Down_And_Left: {fileID: 3274979833414953190, guid: 2fee0fe6afe71dc479b2a52bd9e4d0ab, type: 3}
+  circle_And_square: {fileID: 8404832384888015448, guid: 1b1c83c4c3d69ec47a3e6dbbdd161f89, type: 3}
+  circle_Field: {fileID: 536195118742403589, guid: 9794dac9c53de9147989fc686230bb3d, type: 3}
+  circle_Boom: {fileID: 621301680344735963, guid: 9f2d74e64266a954abfaace9b45cb614, type: 3}
+  circle_Meteor: {fileID: 1575897497950308172, guid: f07bcb39e85033b4d9ac645af7b744d8, type: 3}
 --- !u!1 &680246915
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,10 +650,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7d29069184eae754992dd764b4beef30, type: 3}
   - {fileID: 8300000, guid: ee7f9233369453e4692dda296b1eda46, type: 3}
   - {fileID: 8300000, guid: 87b6227cc5c2f5a4eac4c97897f17a67, type: 3}
+  - {fileID: 8300000, guid: 105dbe2648732d74ba7717bf02e59fe5, type: 3}
+  - {fileID: 8300000, guid: 04660d01001d70d429e77ec7e89687b8, type: 3}
+  - {fileID: 8300000, guid: 0b0aefc4337a00c479a8e0ecd210402c, type: 3}
+  - {fileID: 8300000, guid: 7cb9243d40dd87e4d964a46610ee0679, type: 3}
   EFT:
   - {fileID: 8300000, guid: 7c2f8fab69c736845adadb9bd907a2a1, type: 3}
   - {fileID: 8300000, guid: 5fef6ece88717174b88971d94914123c, type: 3}
   - {fileID: 8300000, guid: 5a656a0339a9a444a8c0816ce7b6cf4b, type: 3}
+  - {fileID: 8300000, guid: 34d741642db889048a872a8cb6322334, type: 3}
   volume: 1
 --- !u!114 &859445650 stripped
 MonoBehaviour:
@@ -788,6 +849,8 @@ GameObject:
   - component: {fileID: 1487035266}
   - component: {fileID: 1487035264}
   - component: {fileID: 1487035265}
+  - component: {fileID: 1487035267}
+  - component: {fileID: 1487035268}
   m_Layer: 5
   m_Name: GM
   m_TagString: Untagged
@@ -930,6 +993,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ad86b87863d58204c9280b96c6d6646a, type: 3}
   - {fileID: 21300000, guid: 31c72d34d132c9344bd00785ce385754, type: 3}
   - {fileID: 21300000, guid: 194f076e9212739438d89bc62cd9735f, type: 3}
+  - {fileID: 21300000, guid: 6e1e8e7e65ceeae48a1520ee37542a5a, type: 3}
+  - {fileID: 21300000, guid: d7c136caaf301d74fb024674c90be52e, type: 3}
+  - {fileID: 21300000, guid: 249636bfd09fb8948b16a1f0d0899725, type: 3}
+  - {fileID: 21300000, guid: 498d8905dc4aa464baf4d67a5d321e28, type: 3}
+  - {fileID: 21300000, guid: 6d8914b106cdd674d8b3d75a9603da0d, type: 3}
+  - {fileID: 21300000, guid: 2f4caa77d7a2ed14097414ce68b306d4, type: 3}
+  - {fileID: 21300000, guid: 6eaebbf826f14fb4597e71966565af24, type: 3}
+  - {fileID: 21300000, guid: c23bd521d1f7fed4dad8576a64673476, type: 3}
   BSS: 0
   NSS: 0
   nowScene: 0
@@ -938,6 +1009,7 @@ MonoBehaviour:
   stage: 0
   sceneSkeep: 0
   nowBattle: 0
+  Pla: {fileID: 922880644}
 --- !u!114 &1487035265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,10 +1022,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d475f4764792634097c0a7c04c8d71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 922880644}
-  Field: {fileID: 1736617317}
   time: 0
   isStop: 0
+  isFirst: 0
   round: 0
 --- !u!114 &1487035266
 MonoBehaviour:
@@ -971,11 +1042,36 @@ MonoBehaviour:
   time: 0
   isStop: 0
   round: 0
---- !u!1 &1736617317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 434507746774196154, guid: 108949eb66b1ec74e96faba928b36846, type: 3}
-  m_PrefabInstance: {fileID: 533518902}
+--- !u!114 &1487035267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487035257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112dc12ffe74a3446bb0b2d7e5d2d7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+  isStop: 0
+  round: 0
+--- !u!114 &1487035268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487035257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61256c223e592346b177cecfb01cc54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+  isStop: 0
+  round: 0
 --- !u!1 &1955900751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 922880645, guid: ce4975041512602489f6a7bcbf6d54ca, type: 3}
       propertyPath: m_UsedByEffector
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 607698212312734493, guid: ce4975041512602489f6a7bcbf6d54ca, type: 3}
       propertyPath: m_Radius

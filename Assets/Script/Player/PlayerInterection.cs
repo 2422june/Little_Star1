@@ -63,13 +63,13 @@ public class PlayerInterection : MonoBehaviour
 
     public void AddHp(int i)
     {
-        if(hp + i < 5)
+        if(hp + i < GameManager.GM.PlaMaxHp)
         {
             hp += i;
         }
         else
         {
-            hp = 5;
+            hp = GameManager.GM.PlaMaxHp;
         }
         BGMManager.i.EFTPlay(1);
         ShowDark();
@@ -90,6 +90,7 @@ public class PlayerInterection : MonoBehaviour
 
     public void DestroyObj()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }

@@ -25,7 +25,7 @@ public class BattleEvent1 : MonoBehaviour
     public int round = 0, choose = 0;
     public float time = 0f;
     public bool isStop = false;
-    public bool isBeddingKick = false, isLight = false, isGlass = false;
+    public bool isBeddingKick = false, isLight = false, isGlass = false, complete = false;
     public bool nowEvent = false, startEvent = false, isFirst = false;
     #endregion
 
@@ -69,6 +69,7 @@ public class BattleEvent1 : MonoBehaviour
 
     public void Event1()
     {
+
         if (!isStop)
         {
             time += Time.deltaTime;
@@ -95,6 +96,7 @@ public class BattleEvent1 : MonoBehaviour
                 round++;
                 time = 1.5f;
                 isStop = false;
+                isFirst = true;
             }
         }
         #endregion
@@ -198,12 +200,13 @@ public class BattleEvent1 : MonoBehaviour
             {
                 DialogueManager.i.OnBase(false, new Vector2(0, 0), new Vector2(0, 0));
                 isStop = false;
-                round++;
+                round = 12;
+                time = 2.1f;
             }
         }
         #endregion
 
-        #region event6
+        /*#region event6
         if (round == 10 && time >= 2.1f)
             {
                 if (!isFirst)
@@ -217,9 +220,9 @@ public class BattleEvent1 : MonoBehaviour
                     DialogueManager.i.OnBase(true, new Vector2(0, 300), new Vector2(1200, 250));
                     DialogueManager.i.OnTxt(50, "아직 잠을 다 깨지 못 했다.", 1.5f, new Color(255, 255, 255, 255));
                     DialogueManager.i.OnDialogueNext(new Vector2(0, -2f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
-                    isFirst = true;
-                }
-                isStop = true;
+            }
+            isFirst = true;
+            isStop = true;
                 round++;
             }
 
@@ -232,7 +235,7 @@ public class BattleEvent1 : MonoBehaviour
                     round++;
                 }
             }
-            #endregion
+            #endregion*/
 
         #region event7
             if (round == 12 && time >= 2.2f)
@@ -454,6 +457,7 @@ public class BattleEvent1 : MonoBehaviour
     {
         if (isBeddingKick && isGlass && isLight)
         {
+            complete = true;
             events = 0;
             time = 0;
             round = 0;

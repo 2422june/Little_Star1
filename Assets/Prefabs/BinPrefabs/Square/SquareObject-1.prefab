@@ -102,6 +102,7 @@ MonoBehaviour:
   objectSpeed: 25
   minWidth: -2
   maxWidth: 0
+  onDir: 1
 --- !u!61 &5938295283245659704
 BoxCollider2D:
   m_ObjectHideFlags: 0

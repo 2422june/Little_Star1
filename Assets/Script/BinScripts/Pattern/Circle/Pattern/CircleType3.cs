@@ -6,7 +6,7 @@ public class CircleType3 : MonoBehaviour
 {
     [Header("구의 영역이 커지고 터진 후 삭제되는 코드")]
 
-    public SpriteRenderer circleObject;      //데미지를 주는 영역으로 바뀌기 전 스프라이트
+    public SpriteRenderer circleObject;     //데미지를 주는 영역으로 바뀌기 전 스프라이트
     public float scaleSpeed;                //영역의 크기 변환을 위한 변수
     public float colorSpeed;                //오브젝트의 색이 바뀌는 속도
     public float maxScale;                  //오브젝트의 최대 크기
@@ -37,7 +37,7 @@ public class CircleType3 : MonoBehaviour
         {
             if (transform.localScale.x < maxScale && transform.localScale.y < maxScale)
             {   
-                transform.localScale = new Vector3(transform.localScale.x + speed, transform.localScale.y + speed, 1);
+                transform.localScale = new Vector3(transform.localScale.x + speed * Time.deltaTime, transform.localScale.y + speed * Time.deltaTime, 1);
             }
             else
             {
@@ -50,7 +50,7 @@ public class CircleType3 : MonoBehaviour
         {
             if (transform.localScale.x > minScale && transform.localScale.y > minScale)
             {
-                transform.localScale = new Vector3(transform.localScale.x - speed, transform.localScale.y - speed, 1);
+                transform.localScale = new Vector3(transform.localScale.x - speed * Time.deltaTime, transform.localScale.y - speed * Time.deltaTime, 1);
             }
             else
             {

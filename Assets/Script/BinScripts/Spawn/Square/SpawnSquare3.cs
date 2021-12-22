@@ -11,6 +11,7 @@ public class SpawnSquare3 : MonoBehaviour
 
     private bool isTrue;
     private float posX = -5f;
+
     void Start()
     {
         for (float i = 0f; i <= 10f; i += 5)
@@ -30,7 +31,7 @@ public class SpawnSquare3 : MonoBehaviour
         {
             for (float i = 2.5f; i <= 7.5f; i += 2.5f)
             {
-                if(i + posX != 0)
+                if(i + posX !=  0)
                     Instantiate(squareObject, new Vector3(posX + i, 10, 0), Quaternion.identity);
 
                 if (i == 7.5f)
@@ -38,4 +39,5 @@ public class SpawnSquare3 : MonoBehaviour
             }
         }
     }
+
 }

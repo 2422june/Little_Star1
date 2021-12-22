@@ -14,8 +14,9 @@ public class SquareType2 : MonoBehaviour
     public float minWidth;                  //최소 이동 너비
     public float maxWidth;                  //최대 이동 너비
 
+    public bool onDir;
     private bool onColor, onDestroy, isColor, isMove, destroyObj, onScale;
- 
+    
     //x -0.5 -> 0.5 -> 0 -> 컬러 변경 -> 스케일 변경 하며 알파값 변경 -> 삭제
     
 
@@ -28,18 +29,36 @@ public class SquareType2 : MonoBehaviour
     }
     private void Update()
     {
-        //오브젝트 이동 코드
-        if (transform.position.x > minWidth && isMove)        //오브젝트가 -2까지 이동
-        {
-            transform.Translate(Vector2.left * objectSpeed * Time.deltaTime);
-        }
-        else if(transform.position.x < maxWidth)        //오브젝트가 -2까지 이동하면 2좌표로 이동
-        {
-            transform.Translate(Vector2.right * objectSpeed * Time.deltaTime);
+        if(onDir)
+        {//오브젝트 이동 코드
+            if (transform.position.x > minWidth && isMove)        //오브젝트가 -2까지 이동
+            {
+                transform.Translate(Vector2.left * objectSpeed * Time.deltaTime);
+            }
+            else if (transform.position.x < maxWidth)        //오브젝트가 -2까지 이동하면 2좌표로 이동
+            {
+                transform.Translate(Vector2.right * objectSpeed * Time.deltaTime);
 
-            isMove = false;
-            onColor = true;
+                isMove = false;
+                onColor = true;
+            }
         }
+        else
+        {
+            //오브젝트 이동 코드
+            if (transform.position.x > minWidth && isMove)        //오브젝트가 -2까지 이동
+            {
+                transform.Translate(Vector2.right * objectSpeed * Time.deltaTime);
+            }
+            else if (transform.position.x < maxWidth)        //오브젝트가 -2까지 이동하면 2좌표로 이동
+            {
+                transform.Translate(Vector2.left * objectSpeed * Time.deltaTime);
+
+                isMove = false;
+                onColor = true;
+            }
+        }
+        
         
 
         if(onColor)     //이동 후 이펙트 효과

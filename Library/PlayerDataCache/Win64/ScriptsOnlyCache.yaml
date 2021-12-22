@@ -3,22 +3,30 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BGMManager
     - BattleEvent1
+    - BattleEvent2
     - Circle1Spawn
+    - CircleSpawn
     - CircleType1_Down
     - CircleType1_Up
     - CircleType2
+    - CircleType3
+    - CircleType4
     - CircleType5
+    - Circle_Square1
     - DialogueManager
     - DialogueNext
     - EventNext
     - Fade
     - FieldManager
+    - GMOver
     - GameManager
     - GameOverManager
     - IntroManager
+    - LastManager
     - ObjectEffect
     - ObjectMove
     - ObjectMoveDown
+    - ObjectRotation
     - ObjectScale
     - PlayerInterection
     - PlayerMovement
@@ -27,9 +35,15 @@ ScriptsOnlyBuild:
     - SpawnSquare5
     - SpawnSquare6
     - SpawnSquare7
+    - SquareHieght
+    - SquareOrderHieght
     - SquareType2
     - SquareType3
+    - SquareWidth
+    - SquareWidthAndHieght
     - Stage1_PatternManager
+    - Stage2_PatternManager
+    - ThirdManager
     - TitleManager
     - Txt
     Unity.2D.Animation.Editor.dll:
@@ -56,6 +70,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -95,71 +110,97 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1628}
     - Class: 114
+      Script: {instanceID: 1758}
+    - Class: 114
       Script: {instanceID: 1770}
     - Class: 114
-      Script: {instanceID: 1976}
+      Script: {instanceID: 1978}
     - Class: 114
-      Script: {instanceID: 2100}
+      Script: {instanceID: 2102}
     - Class: 114
-      Script: {instanceID: 2252}
+      Script: {instanceID: 2254}
     - Class: 114
-      Script: {instanceID: 2352}
+      Script: {instanceID: 2320}
     - Class: 114
-      Script: {instanceID: 2372}
+      Script: {instanceID: 2356}
     - Class: 114
-      Script: {instanceID: 2452}
+      Script: {instanceID: 2376}
     - Class: 114
-      Script: {instanceID: 2518}
+      Script: {instanceID: 2456}
     - Class: 114
-      Script: {instanceID: 2638}
+      Script: {instanceID: 2524}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2558}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2646}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2700}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 2754}
     - Class: 114
-      Script: {instanceID: 2964}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 3024}
+      Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 3130}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 3270}
+      Script: {instanceID: 2974}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3564}
+      Script: {instanceID: 3140}
     - Class: 114
-      Script: {instanceID: 3658}
+      Script: {instanceID: 3280}
     - Class: 114
-      Script: {instanceID: 3844}
+      Script: {instanceID: 3408}
     - Class: 114
-      Script: {instanceID: 3860}
+      Script: {instanceID: 3454}
     - Class: 114
-      Script: {instanceID: 4092}
+      Script: {instanceID: 3576}
     - Class: 114
-      Script: {instanceID: 4218}
+      Script: {instanceID: 3670}
     - Class: 114
-      Script: {instanceID: 4260}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 4542}
+      Script: {instanceID: 3856}
     - Class: 114
-      Script: {instanceID: 4550}
+      Script: {instanceID: 3872}
     - Class: 114
-      Script: {instanceID: 4740}
+      Script: {instanceID: 4106}
     - Class: 114
-      Script: {instanceID: 4798}
+      Script: {instanceID: 4174}
     - Class: 114
-      Script: {instanceID: 5058}
+      Script: {instanceID: 4188}
     - Class: 114
-      Script: {instanceID: 5484}
+      Script: {instanceID: 4236}
     - Class: 114
-      Script: {instanceID: 5540}
+      Script: {instanceID: 4278}
     - Class: 114
-      Script: {instanceID: 5612}
+      Script: {instanceID: 4560}
+    - Class: 114
+      Script: {instanceID: 4568}
+    - Class: 114
+      Script: {instanceID: 4574}
+    - Class: 114
+      Script: {instanceID: 4638}
+    - Class: 114
+      Script: {instanceID: 4758}
+    - Class: 114
+      Script: {instanceID: 4816}
+    - Class: 114
+      Script: {instanceID: 4842}
+    - Class: 114
+      Script: {instanceID: 5078}
+    - Class: 114
+      Script: {instanceID: 5466}
+    - Class: 114
+      Script: {instanceID: 5506}
+    - Class: 114
+      Script: {instanceID: 5562}
+    - Class: 114
+      Script: {instanceID: 5634}
+    - Class: 114
+      Script: {instanceID: 5728}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -198,15 +239,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1450}
     - Class: 114
-      Script: {instanceID: 2638}
+      Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2646}
     - Class: 114
-      Script: {instanceID: 3024}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 3270}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 25510}
+      Script: {instanceID: 3280}
+    - Class: 114
+      Script: {instanceID: 3392}
+    - Class: 114
+      Script: {instanceID: 4150}
+    - Class: 114
+      Script: {instanceID: 38822}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,47 +262,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Intro.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    Assets/Scenes/IntroBattle.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    Assets/Scenes/SecondScene.unity:
+    Assets/Scenes/ThirdBattle.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -365,6 +380,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 9fd8684fc23ade94df0ef1a703bda346
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SquareHieght
+  - hash:
+      serializedVersion: 2
       Hash: ad36ea0e8debb702094311e3eb3fe701
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -425,13 +446,19 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
+      Hash: 2f627106af6c70ff9a4623c39dfafcc5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Stage2_PatternManager
+  - hash:
+      serializedVersion: 2
       Hash: 9896bf2031b02a3bf4cb03aaf4992b4e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectScale
   - hash:
       serializedVersion: 2
-      Hash: f1130e206c6eff2cfad629a522d79462
+      Hash: 5aeadfbcb643f4086665145bed8e71e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SquareType2
@@ -449,7 +476,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: a58e3b5071d0c2bd1d5fd603c1adc012
+      Hash: b38494bf868cddc7e5e0961aa08b2377
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -461,10 +488,22 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
+      Hash: fe4ed44dcf6e1970491b3d9d1c736e63
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnSquareWidthRight
+  - hash:
+      serializedVersion: 2
       Hash: 3c9c8020c2534b2bc78613d6dce23db2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Stage1_PatternManager
+  - hash:
+      serializedVersion: 2
+      Hash: edd2a5efced7fd6719401e9530dd1d7f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Circle_Square1
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -513,6 +552,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 3ba71dd3adc9dc0b2392a94d59863a46
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SquareWidth
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -575,7 +620,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: b3f1d169762f151007224ccb3c76fb74
+      Hash: 18cbcfe137a5660a9abae46a8eb10248
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TitleManager
@@ -623,6 +668,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 924a614259e4bd82ca92e3ddf0598dda
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BattleEvent2
+  - hash:
+      serializedVersion: 2
       Hash: 349d08daa6108b9a28f8c38fd40ce96f
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: UnityEngine.U2D
@@ -659,7 +710,7 @@ ScriptsOnlyBuild:
     className: DialogueManager
   - hash:
       serializedVersion: 2
-      Hash: 189f04132c241b1cd09c54a33d196498
+      Hash: 8e92acf528a943f80b491def8610a992
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CircleType4
@@ -743,7 +794,13 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: e3b72e6d06632738b7dae982a84f8a82
+      Hash: 47067c4bd5179df2e136443c439c8671
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BattleEvent3
+  - hash:
+      serializedVersion: 2
+      Hash: 6c3c3452bf616cb849a3f6294352149b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SquareType3
@@ -761,10 +818,22 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverManager
+  - hash:
+      serializedVersion: 2
       Hash: 8e08b8fe25a2f8226638b93828c4218e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CircleType3
+  - hash:
+      serializedVersion: 2
+      Hash: 1bfaba2832c62c94ed2c399a7efca646
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SquareWidthAndHieght
   - hash:
       serializedVersion: 2
       Hash: 87cef3c82381dc586f6772c3e27561b6
@@ -845,7 +914,7 @@ ScriptsOnlyBuild:
     className: SpawnSquare4
   - hash:
       serializedVersion: 2
-      Hash: 47067c4bd5179df2e136443c439c8671
+      Hash: 103d16cfcd8305720bc49fb84e6f0da3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BattleEvent1
@@ -923,6 +992,12 @@ ScriptsOnlyBuild:
     className: DialogueNext
   - hash:
       serializedVersion: 2
+      Hash: e20c446170fb27f0964c678dfa1f9f86
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SquareOrderHieght
+  - hash:
+      serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -963,6 +1038,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: BufferManager
+  - hash:
+      serializedVersion: 2
+      Hash: 07e9f85d9df722b87e07f324342b018c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ThirdManager
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -1013,15 +1094,19 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
+      Hash: 07e9f85d9df722b87e07f324342b018c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LastManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: GameOverManager
+    className: GMOver
   platform: 19
   scenePathNames:
   - Assets/Scenes/FirstScene.unity
-  - Assets/Scenes/Intro.unity
-  - Assets/Scenes/IntroBattle.unity
   - Assets/Scenes/GameOver.unity
-  - Assets/Scenes/SecondScene.unity
+  - Assets/Scenes/ThirdBattle.unity
   playerPath: C:/unity/Little_Star/Little_Star.exe

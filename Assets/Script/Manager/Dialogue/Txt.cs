@@ -58,6 +58,7 @@ public class Txt : MonoBehaviour
         {
             PlayerInterection.PI.AddHp();
         }*/
+        DialogueManager.i.OnBase(false, new Vector2(0, 0), new Vector2(0, 0));
         DialogueManager.i.onDialogue = false;
     }
 

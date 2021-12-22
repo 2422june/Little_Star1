@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &184075852280364331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184075852280364341}
+  - component: {fileID: 184075852280364340}
+  m_Layer: 0
+  m_Name: Stage2_PatternManager
+  m_TagString: Gimic
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &184075852280364341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184075852280364331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &184075852280364340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184075852280364331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba485e366fd6d0648aeea2871fac9db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battle_Count: 0
+  battle_Timer: 0
+  onStart_Stage: 0
+  square_Width: {fileID: 3832780072120507121, guid: e34709366a4a00f45882b99d710e1860, type: 3}
+  square_Hieght: {fileID: 1030811567681617462, guid: 7043cc5473a39e64883d900421ce9d41, type: 3}
+  square_Order_Hieght: {fileID: 5254976888296796390, guid: 31d0b6b617cdc8346b42991b9329ce4d, type: 3}
+  square_Width_And_Hieght: {fileID: 1259107716731099926, guid: f220c72f0a23fae41bfd8de796e729b1, type: 3}
+  square_Down: {fileID: 6807946968926834943, guid: f27a4866295cc70479047e0208bad4b9, type: 3}
+  square_Down_And_Left: {fileID: 3274979833414953190, guid: 2fee0fe6afe71dc479b2a52bd9e4d0ab, type: 3}
+  circle_And_square: {fileID: 8404832384888015448, guid: 1b1c83c4c3d69ec47a3e6dbbdd161f89, type: 3}
+  circle_Field: {fileID: 536195118742403589, guid: 9794dac9c53de9147989fc686230bb3d, type: 3}
+  circle_Boom: {fileID: 621301680344735963, guid: 9f2d74e64266a954abfaace9b45cb614, type: 3}
+  circle_Meteor: {fileID: 1575897497950308172, guid: f07bcb39e85033b4d9ac645af7b744d8, type: 3}

@@ -20,12 +20,9 @@ public class TitleManager : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    GameObject Player, Field;
-
     public float time;
 
-    public bool isStop;
+    public bool isStop, isFirst;
     public int round;
 
     // Start is called before the first frame update
@@ -34,7 +31,7 @@ public class TitleManager : MonoBehaviour
         time = 0f;
         round = 0;
         isStop = false;
-
+        isFirst = false;
         Cursor.visible = false;
 
         FieldManager.FieldMng.OnField(false, new Vector2(0, 0), new Vector2(0, 0));
@@ -68,22 +65,32 @@ public class TitleManager : MonoBehaviour
 
     void Intro()
     {
-        #region Dialogue.0
-        if (round == 0)
+        if (!isFirst)
         {
-            DialogueManager.i.OnBase(false, new Vector2(0, 0), new Vector2(1000, 400));
-            DialogueManager.i.OnTxt(50, "조작법\n이동 : 이동키\n상호작용, 확인 : enter, space", 10f, new Color(255, 255, 255, 255));
-            DialogueManager.i.OnDialogueNext(new Vector2(0, -2f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
+            #region Dialogue.0
+            if (round == 0)
+            {
+                DialogueManager.i.OnBase(false, new Vector2(0, 0), new Vector2(1000, 400));
+                DialogueManager.i.OnTxt(50, "조작법\n이동 : 이동키\n상호작용, 확인 : enter, space\n타이틀 화면 : esc", 10f, new Color(255, 255, 255, 255));
+                DialogueManager.i.OnDialogueNext(new Vector2(0, -2f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
 
-            isStop = true;
-            round++;
+                isStop = true;
+                round++;
+            }
+
+            if (round == 1)
+            {
+                if (IsOffDialogue())
+                {
+                    isFirst = true;
+                }
+            }
+            #endregion
         }
-
-        if (round == 1)
+        else if(round == 0)
         {
-            IsOffDialogue();
+            round = 2;
         }
-        #endregion
 
         #region Dialogue.1
         if (time >= 0 && round == 2)

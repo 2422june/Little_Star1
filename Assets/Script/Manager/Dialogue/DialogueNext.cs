@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueNext : MonoBehaviour
 {
+
     Txt txt;
     public GameManager.NextSpriteState NSS;
 
@@ -22,7 +23,7 @@ public class DialogueNext : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (txt.isNext && !txt.isSet)
+        if ((txt.isNext && !txt.isSet) || !DialogueManager.i.onDialogue)
         {
             txt.isNext = false;
             Destroy(this.gameObject);
@@ -43,6 +44,7 @@ public class DialogueNext : MonoBehaviour
 
         if (NSS == GameManager.NextSpriteState.GameStart)
         {
+            txt.EndTxt();
             DialogueManager.i.onDialogue = false;
             GameManager.GM.SetScene(GameManager.NowScene.intro);
         }

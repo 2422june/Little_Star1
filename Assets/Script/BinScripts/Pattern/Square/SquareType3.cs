@@ -11,7 +11,8 @@ public class SquareType3 : MonoBehaviour
     public float scaleSpeed;                //스케일 변경 속도 변수
     public float colorSpeed;                //색 변경 속도 변수
     public float objectSpeed;               //오브젝트가 움직일때의 스피드값
-    public float minHieght;                  //최소 이동 높이
+    public float minHieght;                 //최소 이동 높이
+    public float maxHieght;                 //최대 이동 높이    
 
     private bool onColor, onDestroy, isColor, isMove, destroyObj, onScale;
 
@@ -32,7 +33,7 @@ public class SquareType3 : MonoBehaviour
         {
             transform.Translate(Vector2.down * objectSpeed * Time.deltaTime);
         }
-        else if (transform.position.y < 0)        //오브젝트가 -2까지 이동하면 0좌표로 이동
+        else if (transform.position.y < maxHieght)        //오브젝트가 -2까지 이동하면 0좌표로 이동
         {
             transform.Translate(Vector2.up * objectSpeed * Time.deltaTime);
             isMove = false;

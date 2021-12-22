@@ -14,7 +14,7 @@ public class SpawnSquare4 : MonoBehaviour
 
     private float spawnCount;        //오브젝트가 몇개 생성됬는지 새려줄 카운트 
     private float position_X;        //오브젝트를 생성 좌표값 X
-    private float spawnDlay;          //스폰 딜레이
+    private float spawnDlay;         //스폰 딜레이
     private float Delay;             //오브젝트 생성 딜레이
 
     private void Start()

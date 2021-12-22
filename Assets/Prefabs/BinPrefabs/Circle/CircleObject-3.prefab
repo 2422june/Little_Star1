@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleObject: {fileID: 3395257475157627893}
-  scaleSpeed: 400
+  scaleSpeed: 800
   colorSpeed: 1
   maxScale: 4
   minScale: 3

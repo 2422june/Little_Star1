@@ -10,18 +10,18 @@ public class CircleType4 : MonoBehaviour
     public GameObject circleObject;     //생성시킬 오브젝트
     public float max_Delay;              //오브젝트가 위에러 내려올때의 딜레이 최대값
     public float max_SpawnDelay;        //오브젝트 생성 딜레이의 최대값
+    [SerializeField] private float default_posY;         //오브젝트의 초기 y값을 저장시킬 변수
 
     private float Delay;                //오브젝트가 위에서 내려올때의 딜레이
-    private float spawnDelay;           //오브젝트 생성 딜레이
+    public float spawnDelay;           //오브젝트 생성 딜레이
     private float posY;                 //오브젝트의 y값을 저장시킬 변수
-    private float default_posY;         //오브젝트의 초기 y값을 저장시킬 변수
+   
     private int random_X;               //오브젝트의 x값을 랜덤으로 돌림
 
     private void Start()
     {
-        spawnDelay = max_Delay;         //스폰 딜레이값 초기화
+        spawnDelay = max_SpawnDelay;         //스폰 딜레이값 초기화
         Delay = max_Delay;              //딜레이값 초기화
-        default_posY = circleSpawner.transform.position.y;      //기본 y 좌표값
         posY = default_posY;                                    //y좌표값을 기본 좌표값으로 선언
 
     }

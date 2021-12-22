@@ -8,16 +8,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstScene.unity
     guid: 08d8bfd91c6f8644988405473f5c7cb7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro.unity
     guid: 0069618ae503fc249b08f89d6a55533a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IntroBattle.unity
     guid: 5f03d0af14477bb4d9eb3305946395d9
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: d43bacc97a5a837478a24330a6fd75a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SecondScene.unity
     guid: c4162c7907e8e7e428a4837154231cf8
+  - enabled: 0
+    path: Assets/Scenes/SecondBattle.unity
+    guid: 6805a75ea6face644a0f80c0c68e52c2
+  - enabled: 0
+    path: Assets/Scenes/ThirdScene.unity
+    guid: fc43b39a141d69a4082b8e5141c26d19
+  - enabled: 1
+    path: Assets/Scenes/ThirdBattle.unity
+    guid: 07969631daf497e4b8d32f94e786a5be
+  - enabled: 0
+    path: Assets/Scenes/LastScene.unity
+    guid: 74c862ac168c20047932e0dd3d1f43d2
   m_configObjects: {}

@@ -35,7 +35,6 @@ public class ObjectScale : MonoBehaviour
 
             Delay = max_Delay;
         }
-
         if(onScale)
         {
             transform.localScale = new Vector3(transform.localScale.x + scale_Speed * Time.deltaTime, transform.localScale.y + scale_Speed * Time.deltaTime, 1);

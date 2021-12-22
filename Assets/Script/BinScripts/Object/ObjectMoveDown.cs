@@ -8,7 +8,7 @@ public class ObjectMoveDown : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.down * Speed * Time.deltaTime, Space.Self);
+        transform.position = new Vector2(transform.position.x,transform.position.y -1 * Speed * Time.deltaTime);
         if (this.transform.position.y <= -5.8f)
             Destroy(this.gameObject);
     }
