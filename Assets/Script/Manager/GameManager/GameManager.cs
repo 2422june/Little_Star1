@@ -224,6 +224,10 @@ public class GameManager : MonoBehaviour
         BattleEvent2.i.isStop = BattleEvent2.i.isClearBathRoom = BattleEvent2.i.isClearCabinet = false;
         BattleEvent2.i.hair = BattleEvent2.i.dry = BattleEvent2.i.top = BattleEvent2.i.bottom = false;
         BattleEvent2.i.nowEvent = BattleEvent2.i.startEvent = BattleEvent2.i.isFirst = false;
+
+        BattleEvent3.i.events = BattleEvent3.i.round = BattleEvent3.i.choose = 0;
+        BattleEvent3.i.nowEvent = BattleEvent3.i.startEvent = BattleEvent3.i.isFirst = false;
+        BattleEvent3.i.time = 0f;
     }
 
     public void SetScene(NowScene _nowScene)
@@ -233,6 +237,7 @@ public class GameManager : MonoBehaviour
         switch (nowScene)
         {
             case NowScene.firstScene:
+                Stage3_PatternManager.i.onStartPattern = false;
                 FieldManager.FieldMng.OnField(false, new Vector2(0, 0), new Vector2(0, 0));
                 Pla.SetActive(true);
                 PlayerInterection.PI.SetField(PlaHp, PlaMaxHp);
@@ -315,6 +320,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case NowScene.lastScene:
+                Stage3_PatternManager.i.onStartPattern = false;
                 BGMManager.i.BgmPause();
                 sceneSkeep = 7;
                 BGMManager.i.BGMOnLoop(true);
