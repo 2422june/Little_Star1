@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SquareType3 : MonoBehaviour
 {
-    [Header("사각형 장애물 생성 (세로)")]
+    [Header("사각형 오브젝트를 위에서 아래로 이동")]
 
     public SpriteRenderer squareObject;     //생성한 오브젝트의 컬러를 바꾸기 위한 스프라이트 렌더
 
@@ -13,7 +13,7 @@ public class SquareType3 : MonoBehaviour
     public float objectSpeed;               //오브젝트가 움직일때의 스피드값
     public float minHieght;                 //최소 이동 높이
     public float maxHieght;                 //최대 이동 높이    
-
+    [SerializeField] private bool onFade;
     private bool onColor, onDestroy, isColor, isMove, destroyObj, onScale;
 
     //x -0.5 -> 0.5 -> 0 -> 컬러 변경 -> 스케일 변경 하며 알파값 변경 -> 삭제
@@ -35,6 +35,8 @@ public class SquareType3 : MonoBehaviour
         }
         else if (transform.position.y < maxHieght)        //오브젝트가 -2까지 이동하면 0좌표로 이동
         {
+            if (onFade)
+                Fade.i.OnFade(0.1f);
             transform.Translate(Vector2.up * objectSpeed * Time.deltaTime);
             isMove = false;
             onColor = true;

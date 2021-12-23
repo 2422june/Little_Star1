@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        PlaHp = PlaMaxHp = 8;
+        PlaHp = PlaMaxHp = 10;
         sceneSkeep = 0;
         nowBattle = false;
         PlayerInterection.PI.SetField(PlaHp, PlaMaxHp);
@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        #region
         if (Input.GetKeyDown(KeyCode.U))
         {
             ResetScene();
@@ -142,6 +143,7 @@ public class GameManager : MonoBehaviour
                 SetScene(NowScene.gameOver);
             }
         }
+        #endregion
 
         if (Input.GetKeyDown(KeyCode.Escape) && nowScene != GameManager.NowScene.firstScene)
         {
@@ -160,8 +162,10 @@ public class GameManager : MonoBehaviour
         LastManager.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.lastScene);
         BattleEvent1.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.introBattle);
         BattleEvent2.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.secondBattle);
+        BattleEvent3.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.thirdBattle);
         Stage1_PatternManager.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.introBattle);
         Stage2_PatternManager.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.secondBattle);
+        Stage3_PatternManager.i.enabled = (GameManager.GM.nowScene == GameManager.NowScene.thirdBattle);
     }
 
     public void ResetScene()
@@ -204,6 +208,11 @@ public class GameManager : MonoBehaviour
         Stage2_PatternManager.i.battle_Timer = 0;
         Stage2_PatternManager.i.battle_Count = 0;
         Stage2_PatternManager.i.DestroyAllGimic();
+
+        Stage3_PatternManager.i.onStartPattern = false;
+        Stage3_PatternManager.i.battle_Timer = 34;
+        Stage3_PatternManager.i.battle_Count = 0;
+        Stage3_PatternManager.i.DestroyAllGimic();
 
         BattleEvent1.i.events = BattleEvent1.i.round = BattleEvent1.i.choose = 0;
         BattleEvent1.i.time = 0f;
@@ -276,7 +285,7 @@ public class GameManager : MonoBehaviour
                 sceneSkeep = 3;
                 BGMManager.i.BGMOnLoop(true);
                 nowBattle = false;
-                PlayerInterection.PI.AddHp(8);
+                PlayerInterection.PI.AddHp(10);
                 //SceneManager.LoadScene("SecondScene");
                 break;
 
@@ -292,7 +301,7 @@ public class GameManager : MonoBehaviour
             case NowScene.thirdScene:
                 sceneSkeep = 5;
                 nowBattle = false;
-                PlayerInterection.PI.AddHp(8);
+                PlayerInterection.PI.AddHp(10);
                 //SceneManager.LoadScene("ThirdScene");
                 break;
 
@@ -301,7 +310,8 @@ public class GameManager : MonoBehaviour
                 nowBattle = true;
                 stage = 3;
                 BGMManager.i.BGMOnLoop(false);
-                SceneManager.LoadScene("ThirdBattle");
+                //StartCoroutine("i");
+                //SceneManager.LoadScene("ThirdBattle");
                 break;
 
             case NowScene.lastScene:
@@ -309,7 +319,7 @@ public class GameManager : MonoBehaviour
                 sceneSkeep = 7;
                 BGMManager.i.BGMOnLoop(true);
                 nowBattle = false;
-                PlayerInterection.PI.AddHp(8);
+                PlayerInterection.PI.AddHp(10);
                 SceneManager.LoadScene("FirstScene");
                 //SceneManager.LoadScene("LastScene");
                 break;
@@ -317,5 +327,17 @@ public class GameManager : MonoBehaviour
 
         SetScripts();
         ResetScene();
+    }
+
+
+
+    IEnumerator i()
+    {
+        yield return new WaitForSeconds(5.0f);
+        if (nowBattle)
+        {
+            PlayerInterection.PI.AddHp(10);
+            StartCoroutine("i");
+        }
     }
 }

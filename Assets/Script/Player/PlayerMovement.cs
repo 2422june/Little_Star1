@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     AudioSource AS;
 
+    
+
     public static PlayerMovement PM;
 
     private void Awake()
@@ -49,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         Push();
     }
+
 
     void Attacked()
     {

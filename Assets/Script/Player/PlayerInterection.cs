@@ -28,10 +28,6 @@ public class PlayerInterection : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            GetHit();
-        }
         if (Input.GetKeyDown(KeyCode.H))
         {
             Hill();

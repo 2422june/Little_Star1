@@ -54,7 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\BinScripts\Spawn\Square\SpawnSquare6.cs" />
-    <Compile Include="Assets\Prefabs\BinPrefabs\Battle2\Scripts\Square\SquareHieght.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\Square\SquareHieght.cs" />
     <Compile Include="Assets\Script\Fild\FieldManager.cs" />
     <Compile Include="Assets\Script\BinScripts\Spawn\Square\SpawnSquare3.cs" />
     <Compile Include="Assets\Script\Fade\Fade.cs" />
@@ -70,7 +70,7 @@
     <Compile Include="Assets\Script\BinScripts\Pattern\Circle &amp; Square\Circle_Square1.cs" />
     <Compile Include="Assets\Script\Manager\Dialogue\Txt.cs" />
     <Compile Include="Assets\Script\BinScripts\Pattern\Circle\Pattern\CircleType1_Up.cs" />
-    <Compile Include="Assets\Prefabs\BinPrefabs\Battle2\Scripts\Square\SquareWidth.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\Square\SquareWidth.cs" />
     <Compile Include="Assets\Script\Player\PlayerInterection.cs" />
     <Compile Include="Assets\Script\BinScripts\Pattern\Circle\Pattern\CircleType2.cs" />
     <Compile Include="Assets\Script\Manager\TitleManager 1\TitleManager.cs" />
@@ -85,7 +85,7 @@
     <Compile Include="Assets\Script\BinScripts\Pattern\Square\SquareType3.cs" />
     <Compile Include="Assets\Script\Manager\GameOverManager\GameOverManager.cs" />
     <Compile Include="Assets\Script\BinScripts\Pattern\Circle\Pattern\CircleType3.cs" />
-    <Compile Include="Assets\Prefabs\BinPrefabs\Battle2\Scripts\Square\SquareWidthAndHieght.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\Square\SquareWidthAndHieght.cs" />
     <Compile Include="Assets\Script\BinScripts\Pattern\Circle\Pattern\CircleType1_Down.cs" />
     <Compile Include="Assets\Script\Manager\Battle\EventNext\EventNext.cs" />
     <Compile Include="Assets\Script\BinScripts\Spawn\Square\SpawnSquare2.cs" />
@@ -95,7 +95,7 @@
     <Compile Include="Assets\Script\BinScripts\Spawn\Circle\CircleSpawn.cs" />
     <Compile Include="Assets\Script\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Script\Manager\Dialogue\DialogueNext.cs" />
-    <Compile Include="Assets\Prefabs\BinPrefabs\Battle2\Scripts\Square\SquareOrderHieght.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\Square\SquareOrderHieght.cs" />
     <Compile Include="Assets\Script\BinScripts\Object\ObjectMove.cs" />
     <Compile Include="Assets\Script\Manager\ThirdManager\ThirdManager.cs" />
     <Compile Include="Assets\Script\Manager\BGMManager\BGMManager.cs" />
@@ -103,6 +103,13 @@
     <Compile Include="Assets\Script\BinScripts\Object\ObjectEffect.cs" />
     <Compile Include="Assets\Script\Button\GMOver.cs" />
     <Compile Include="Assets\Script\Manager\LastManager\LastManager.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\ObjectUp.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Stage3_PatternManager.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\CircleMeteor2.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\Boss1\BossMove.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\Boss1\BossPattern_1.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\SquareHieghtDownandUp.cs" />
+    <Compile Include="Assets\BiN\Battle\Battle3\Scripts\Boss1\BossAppear.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
