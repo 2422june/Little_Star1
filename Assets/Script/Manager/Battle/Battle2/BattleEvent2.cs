@@ -843,7 +843,7 @@ public class BattleEvent2 : MonoBehaviour
             if(!isClearCabinet)
             {
                 DialogueManager.i.OnBase(true, new Vector2(0, 300), new Vector2(1200, 250));
-                DialogueManager.i.OnTxt(50, "이제 옷을 입어야 겠지.", 1f, new Color(255, 255, 255, 255));
+                DialogueManager.i.OnTxt(50, "이제 옷을 입어야 겠다.", 1f, new Color(255, 255, 255, 255));
                 DialogueManager.i.OnDialogueNext(new Vector2(0, -2f), new Vector2(1, 1), GameManager.NextSpriteState.DialogueNext);
             }
             isStop = true;

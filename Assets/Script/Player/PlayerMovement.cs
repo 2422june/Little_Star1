@@ -5,6 +5,14 @@ using UnityEngine.Animations;
 
 public class PlayerMovement : MonoBehaviour
 {
+    SpriteRenderer srr;
+
+    [SerializeField]
+    Sprite defalte;
+
+    [SerializeField]
+    Sprite strong;
+
     public float Speed = 10f;               //이동 속도
 
     private float horizontal;       //수평
@@ -27,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         {
             PM = this;
             AS = GetComponent<AudioSource>();
+            srr = GetComponent<SpriteRenderer>();
             DontDestroyOnLoad(this);
         }
         else
@@ -125,5 +134,15 @@ public class PlayerMovement : MonoBehaviour
                 isAttacked = true;
             }
         }
+    }
+
+    public void SetDefalt()
+    {
+        srr.sprite = defalte;
+    }
+
+    public void SetStrong()
+    {
+        //srr.sprite = strong;
     }
 }

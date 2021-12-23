@@ -1306,6 +1306,14 @@ PrefabInstance:
       propertyPath: m_SleepingMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1254887450546653845, guid: ce4975041512602489f6a7bcbf6d54ca, type: 3}
+      propertyPath: strong
+      value: 
+      objectReference: {fileID: 21300000, guid: 32b6026a490921b4b9100802da5e94b1, type: 3}
+    - target: {fileID: 1254887450546653845, guid: ce4975041512602489f6a7bcbf6d54ca, type: 3}
+      propertyPath: defalte
+      value: 
+      objectReference: {fileID: 21300000, guid: 1946e4f5f9b59104f939ad7e056c9587, type: 3}
     - target: {fileID: 1254887450546653846, guid: ce4975041512602489f6a7bcbf6d54ca, type: 3}
       propertyPath: m_Color.b
       value: 1

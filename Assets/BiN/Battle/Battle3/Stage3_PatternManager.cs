@@ -141,10 +141,29 @@ public class Stage3_PatternManager : MonoBehaviour
         if(battle_Timer >= 34f && !onStartPattern)
         {
             battle_Timer = 0;
+            StartCoroutine("ii");
             onStartPattern = true;
         }
         if(onStartPattern)
             StartPattern();
+    }
+
+    IEnumerator ii()
+    {
+        if(PlayerInterection.PI.hp < PlayerInterection.PI.maxHp)
+        {
+            yield return new WaitForSeconds(10.0f);
+            if (GameManager.GM.nowBattle && GameManager.GM.nowScene == GameManager.NowScene.thirdBattle)
+            {
+                PlayerInterection.PI.AddHp(1);
+                StartCoroutine("ii");
+            }
+        }
+        else
+        {
+            yield return null;
+            StartCoroutine("ii");
+        }
     }
 
     private void StartPattern()

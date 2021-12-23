@@ -234,9 +234,13 @@ public class GameManager : MonoBehaviour
     {
         nowScene = _nowScene;
 
+        SetScripts();
+        ResetScene();
+
         switch (nowScene)
         {
             case NowScene.firstScene:
+                PlayerMovement.PM.SetDefalt();
                 Stage3_PatternManager.i.onStartPattern = false;
                 FieldManager.FieldMng.OnField(false, new Vector2(0, 0), new Vector2(0, 0));
                 Pla.SetActive(true);
@@ -311,11 +315,11 @@ public class GameManager : MonoBehaviour
                 break;
 
             case NowScene.thirdBattle:
+                PlayerMovement.PM.SetStrong();
                 sceneSkeep = 6;
                 nowBattle = true;
                 stage = 3;
                 BGMManager.i.BGMOnLoop(false);
-                //StartCoroutine("i");
                 //SceneManager.LoadScene("ThirdBattle");
                 break;
 
@@ -330,20 +334,8 @@ public class GameManager : MonoBehaviour
                 //SceneManager.LoadScene("LastScene");
                 break;
         }
-
-        SetScripts();
-        ResetScene();
     }
 
 
 
-    IEnumerator i()
-    {
-        yield return new WaitForSeconds(5.0f);
-        if (nowBattle)
-        {
-            PlayerInterection.PI.AddHp(10);
-            StartCoroutine("i");
-        }
-    }
 }
